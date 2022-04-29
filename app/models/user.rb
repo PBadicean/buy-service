@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :adverts
+
+  def client?
+    !admin?
+  end
 end
