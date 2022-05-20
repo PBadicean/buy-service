@@ -3,4 +3,7 @@ class Client::AdvertsController < Client::BaseController
     @adverts = current_user.adverts
   end
 
+  def show
+    @advert = Advert.find_by(id: params[:id])
+  end
 end

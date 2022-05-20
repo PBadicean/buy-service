@@ -1,0 +1,24 @@
+<h1>You are client</h1>
+<h2>Advert</h2>
+
+  <h3>Advert article </h3><p><%= @advert.article %></p>
+  <h3>Advert title</h3> <p><%= @advert.title %></p>
+
+  <body>
+    <% @advert.requests.each do |request| %>
+    <table>
+     <tr>
+        <td>User name - <%=request.user.name %></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Request title - <%=request.title %></td>
+      </tr>
+      <tr>
+        <td>Bid price - <%=request.bid_price %></td>
+      </tr>
+    <table>
+    <% end %>
+  </body>
+<br>
+
