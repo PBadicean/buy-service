@@ -17,12 +17,6 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/ideas">Ideas</a>
-      </li>
-    ...
-    </ul>
 
     <p class="navbar-text float-right">
     <% if user_signed_in? %>
@@ -34,6 +28,14 @@
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     <% end %>
     </p>
+    <% if current_user.admin?%>
+      <%= link_to 'Home page', admin_adverts_path %>
+    <% elsif current_user.client?%>
+      <%= link_to 'Home page', client_adverts_path %>
+    <% end %>
+
     <%= yield %>
   </body>
+
+
 </html>

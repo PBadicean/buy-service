@@ -1,16 +1,18 @@
-<h1>You are client</h1>
 <h2>Advert</h2>
+<h3>Article is "<%= @advert.article %>"</h3>
+<h3>Title is "<%= @advert.title %>"</h3>
 
-  <h3>Advert article </h3><p><%= @advert.article %></p>
-  <h3>Advert title</h3> <p><%= @advert.title %></p>
+<h4>List of users requested for your adverts</h4>
 
   <body>
     <% @advert.requests.each do |request| %>
     <table>
-     <tr>
-        <td>User name - <%=request.user.name %></td>
+      <tr>
+        <td>Name - <%=request.user.name %></td>
       </tr>
       <tr>
+        <td>Email - <%=request.user.email %></td>
+      </tr>
       <tr>
         <td>Request title - <%=request.title %></td>
       </tr>
@@ -18,7 +20,8 @@
         <td>Bid price - <%=request.bid_price %></td>
       </tr>
     <table>
-    <% end %>
+    <%end%>
   </body>
+
 <br>
 
