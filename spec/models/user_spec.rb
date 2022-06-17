@@ -3,7 +3,6 @@ require 'simplecov'
 SimpleCov.start 'rails'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
 
   describe 'associations' do
     it { should have_many(:adverts).class_name('Advert') }
@@ -22,10 +21,7 @@ RSpec.describe User, type: :model do
     end
 
     context "user is not client" do
-      let(:user) { create :user,
-                  name: "Admin",
-                  email: "admin@gmail.com",
-                  admin: true }
+      let(:user) { create :user, admin: true}
       it "returns false" do
         expect(user.admin?).to eq true
       end

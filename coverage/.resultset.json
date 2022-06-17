@@ -1,23 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dmitrybadichan/buy-service/app/models/advert.rb": {
+      "/Users/dmitrybadichan/buy-service/app/models/request.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
           1,
           1,
           null,
@@ -171,21 +157,35 @@
         "branches": {
         }
       },
-      "/Users/dmitrybadichan/buy-service/app/models/application_record.rb": {
+      "/Users/dmitrybadichan/buy-service/app/models/advert.rb": {
         "lines": [
           0,
           0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
           0
         ],
         "branches": {
         }
       },
-      "/Users/dmitrybadichan/buy-service/app/models/request.rb": {
+      "/Users/dmitrybadichan/buy-service/app/models/application_record.rb": {
         "lines": [
           0,
           0,
-          0,
-          null,
           0
         ],
         "branches": {
@@ -215,6 +215,6 @@
         }
       }
     },
-    "timestamp": 1655371960
+    "timestamp": 1655486669
   }
 }
