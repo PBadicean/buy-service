@@ -15,4 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
+  match '/api/v1/adverts', to: 'adverts#create', via: [:post]
+
+
+
 end
