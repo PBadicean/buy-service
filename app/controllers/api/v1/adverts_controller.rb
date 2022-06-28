@@ -1,4 +1,4 @@
-class AdvertsController < ApplicationController
+class Api::V1::AdvertsController < ApplicationController
   def index
     render json: Advert.all
   end
@@ -15,6 +15,11 @@ class AdvertsController < ApplicationController
   def create
     advert = Advert.new(advert_params)
     advert.save!
+  end
+
+  def update
+    advert = Advert.find(params[:id])
+    advert.update(advert_params)
   end
 
   private
