@@ -11,12 +11,14 @@ Rails.application.routes.draw do
 
   authenticate :user, ->(u) { u.client? } do
     namespace :client do
-      resources :adverts,      only: %i[index show]
+      resources :adverts, only: %i[index show]
     end
   end
 
-  match '/api/v1/adverts', to: 'adverts#create', via: [:post]
 
-
-
+  namespace :api do
+    namespace :v1 do
+      resources :adverts, only: %i[create update]
+    end
+  end
 end
