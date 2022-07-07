@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :adverts, only: %i[create update]
+      resources :adverts, only: %i[create update index]
     end
   end
 end
