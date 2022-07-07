@@ -28,10 +28,14 @@
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     <% end %>
     </p>
-    <% if current_user.admin?%>
-      <%= link_to 'Home page', admin_adverts_path %>
-    <% elsif current_user.client?%>
-      <%= link_to 'Home page', client_adverts_path %>
+    <% if current_user %>
+      <% if current_user.admin? %>
+        <%= link_to 'Home page', admin_adverts_path %>
+      <% elsif current_user.client?%>
+          <%= link_to 'Home page', client_adverts_path %>
+      <% end %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     <% end %>
 
     <%= yield %>

@@ -37,5 +37,24 @@ RSpec.describe Advert, :type => :request do
     .to("NEW advert23")
   end
 
-end
+  let(:advert_first) { create(:advert, user: user) }
+  let(:advert_second) { create(:advert, user: user) }
+  let(:result) { JSON.parse(response.body) }
 
+  it "returns http success" do
+    advert_first
+    advert_second
+    get "/api/v1/adverts"
+    expect(response.status).to eq(200)
+  end
+
+  it 'only returns adverts' do
+    advert_first
+    advert_second
+    get "/api/v1/adverts"
+    result_ids = result.map { |res| res['id'] }
+
+    expect(result_ids).to include advert_first.id
+    expect(result_ids).to include advert_second.id
+  end
+end
