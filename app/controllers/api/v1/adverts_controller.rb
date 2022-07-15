@@ -26,6 +26,6 @@ class Api::V1::AdvertsController < ApplicationController
   private
 
   def advert_params
-    params.require(:advert).permit(:title, :article, :user_id)
+    params.require(:advert).permit(:title, :article, :user_id, :category_id)
   end
 end

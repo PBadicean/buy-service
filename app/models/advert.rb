@@ -12,7 +12,7 @@ class Advert < ApplicationRecord
   has_many :requests
 
   belongs_to :user
-  belongs_to :categories
+  belongs_to :category
 
   validates_length_of :article, :is => 5
   validates :title, presence: true
