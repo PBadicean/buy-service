@@ -2,6 +2,7 @@ require "rails_helper"
 
 RSpec.describe Advert, :type => :request do
   let(:user)          { create(:user) }
+  let(:category)      { create(:category) }
   let(:advert)        { create(:advert, user: user) }
   let(:second_advert) { create(:advert, user: user) }
   let(:result)        { JSON.parse(response.body) }
@@ -25,7 +26,8 @@ RSpec.describe Advert, :type => :request do
       "advert" => {
       "user_id" => user.id,
       "title" => 'NEW advert',
-      "article" => '12cod'
+      "article" => '12cod',
+      "category_id" => category.id
       }
     }
   }
