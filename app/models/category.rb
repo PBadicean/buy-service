@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :adversts
+  has_many :adverts
 end
