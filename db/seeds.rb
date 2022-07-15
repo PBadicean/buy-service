@@ -6,17 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(
-  email: "admin@mail.ru",
+  email: "admin_buy_service@gmail.com",
   admin: true,
-  name: 'Polina Admin',
+  name: 'Admin',
   password: 'admin123',
   password_confirmation: 'admin123'
 )
 
 User.create(
-  email: "dima@mail.ru",
+  email: "user@gmail.com",
   admin: false,
-  name: 'Dima Badicean',
-  password: 'dima123',
-  password_confirmation: 'dima123'
+  name: 'User buy_service',
+  password: 'user123',
+  password_confirmation: 'user123'
 )
+
+Category.create(name: "musical instruments")
+Category.create(name: "clothes")
+Category.create(name: "technique")
+Category.create(name: "books")

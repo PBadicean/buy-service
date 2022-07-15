@@ -1,7 +1,7 @@
 class Api::V1::AdvertsController < ApplicationController
   def index
-   @adverts =  Advert.all
-   render json: @adverts
+   adverts =  Advert.all
+   render json: adverts
   end
 
   def show
