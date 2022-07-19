@@ -1,0 +1,30 @@
+<h1>Hello <%= current_user.name %></h1>
+<h2>You are admin</h2>
+
+<% if @adverts.any? %>
+  <h4>All adverts</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Author of advert</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @adverts.each do |advert| %>
+        <tr>
+          <td><%= advert.article %></td>
+          <td><%= advert.title %></td>
+          <td><%= advert.user.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h4>List is empty</h4>
+<% end %>
+
+<br>
+

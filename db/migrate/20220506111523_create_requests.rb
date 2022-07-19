@@ -1,0 +1,12 @@
+class CreateRequests < ActiveRecord::Migration[6.1]
+  def change
+    create_table :requests do |t|
+    t.integer :user_id, null: false
+    t.integer :advert_id, null: false
+    t.string :title, null: false
+    t.text :body
+    t.integer :bid_price, null: false
+    t.timestamps
+    end
+  end
+end

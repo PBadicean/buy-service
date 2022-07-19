@@ -1,0 +1,27 @@
+<h2>Advert</h2>
+<h3>Article is "<%= @advert.article %>"</h3>
+<h3>Title is "<%= @advert.title %>"</h3>
+
+<h4>List of users requested for your adverts</h4>
+
+  <body>
+    <% @advert.requests.each do |request| %>
+    <table>
+      <tr>
+        <td>Name - <%=request.user.name %></td>
+      </tr>
+      <tr>
+        <td>Email - <%=request.user.email %></td>
+      </tr>
+      <tr>
+        <td>Request title - <%=request.title %></td>
+      </tr>
+      <tr>
+        <td>Bid price - <%=request.bid_price %></td>
+      </tr>
+    <table>
+    <%end%>
+  </body>
+
+<br>
+
